@@ -1,0 +1,19 @@
+﻿
+@model Scozzard.Web.ViewModels.ActivityViewModel
+
+<div class="panel-body">
+    <div class="media">
+        <a class="pull-left" href="#">
+            <img class="media-object" src="@Model.XboxUser.GameDisplayPicRaw" />
+        </a>
+        <a class="pull-left" href="#">
+            <img class="media-object" style="height:64px; width:64px" src="@Model.ImageUrl" />
+        </a>
+        <div class="media-body">
+            <small class="small">@Model.StartTime.ToString("F")</small>
+            <p>
+                @Model.XboxUser.GameDisplayName @Model.Description
+            </p>
+        </div>
+    </div>
+</div>
