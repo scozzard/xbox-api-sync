@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryService.cs" />
+    <Compile Include="UserService.cs" />
     <Compile Include="XboxUserService.cs" />
     <Compile Include="GadgetService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

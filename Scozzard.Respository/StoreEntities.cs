@@ -17,6 +17,7 @@ namespace Scozzard.Respository
         public DbSet<Category> Categories { get; set; }
         public DbSet<XboxUser> XboxUsers { get; set; }
         public DbSet<Activity> Activities { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public virtual void Commit()
         {
@@ -29,6 +30,7 @@ namespace Scozzard.Respository
             modelBuilder.Configurations.Add(new CategoryConfiguration());
             modelBuilder.Configurations.Add(new XboxUserConfiguration());
             modelBuilder.Configurations.Add(new ActivityConfiguration());
+            modelBuilder.Configurations.Add(new UserConfiguration());
         }
     }
 }
