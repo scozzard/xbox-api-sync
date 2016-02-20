@@ -14,6 +14,7 @@ namespace Scozzard.Service
     {
         IEnumerable<XboxUser> GetXboxUsers();
         XboxUser GetXboxUser(int id);
+        XboxUser GetXboxUser(string gamerTag);
         void CreateXboxUser(XboxUser XboxUser);
         void SaveXboxUser();
     }
@@ -40,6 +41,12 @@ namespace Scozzard.Service
         public XboxUser GetXboxUser(int id)
         {
             var XboxUser = XboxUsersRepository.GetById(id);
+            return XboxUser;
+        }
+
+        public XboxUser GetXboxUser(string gamertag)
+        {
+            var XboxUser = XboxUsersRepository.Get(x => x.GamerTag == gamertag);
             return XboxUser;
         }
 

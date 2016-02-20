@@ -11,5 +11,6 @@ namespace Scozzard.Respository.Repositories
     public interface IUserRepository : IRepository<User>
     {
         User Get(string email, string password);
+        User GetById(int Id);
     }
 }

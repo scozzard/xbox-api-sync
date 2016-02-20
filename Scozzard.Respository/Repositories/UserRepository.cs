@@ -16,7 +16,20 @@ namespace Scozzard.Respository.Repositories
 
         public User Get(string email, string password)
         {
-            var user = this.DbContext.Users.Where(x => x.Email == email && x.Password == password);
+            var user = this.DbContext
+                .Users
+                .Include("XboxUser")
+                .Where(x => x.Email == email && x.Password == password);
+
+            return user.FirstOrDefault();
+        }
+
+        public User GetById(int Id)
+        {
+            var user = this.DbContext
+                .Users
+                .Include("XboxUser")
+                .Where(x => x.UserID == Id);
 
             return user.FirstOrDefault();
         }

@@ -7,6 +7,7 @@ using AutoMapper;
 using Scozzard.Model;
 using Scozzard.Service;
 using Scozzard.Web.ViewModels;
+using Microsoft.AspNet.Identity;
 
 namespace Scozzard.Web.Controllers
 {
@@ -20,13 +21,16 @@ namespace Scozzard.Web.Controllers
         }
 
         // GET: Home
+        [Authorize]
         public ActionResult Index(string category = null)
         {
+            var userId = int.Parse(HttpContext.User.Identity.GetUserId());
+
             IEnumerable<ActivityViewModel> activityViewModels;
 
-            var xboxUser = xboxUserService.GetXboxUser(1);
-            var userActivities = xboxUserService.GetXboxUser(1).Activities;
-            var friendsActivities = xboxUserService.GetXboxUser(1).Friends.SelectMany(a => a.Activities);
+            var xboxUser = xboxUserService.GetXboxUser(userId);
+            var userActivities = xboxUser.Activities;
+            var friendsActivities = xboxUser.Friends.SelectMany(a => a.Activities);
 
             var allActivities =  userActivities.Union(friendsActivities);
 

@@ -189,6 +189,7 @@
     <Compile Include="ViewModels\CategoryViewModel.cs" />
     <Compile Include="ViewModels\GadgetFormViewModel.cs" />
     <Compile Include="ViewModels\ActivityViewModel.cs" />
+    <Compile Include="ViewModels\RegisterUserViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
     <Compile Include="ViewModels\XboxUserViewModel.cs" />
     <Compile Include="ViewModels\GadgetViewModel.cs" />
@@ -213,6 +214,9 @@
     <Content Include="Views\Feed\Index.cshtml" />
     <Content Include="Views\Shared\Activity.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Account\MyProfile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
