@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Scozzard.XboxApiClient;
-using Scozzard.Model;
+using Scozzard.XboxApiClient.Model;
 
 namespace Scozzard.XboxApiClient.Client
 {
@@ -15,25 +15,25 @@ namespace Scozzard.XboxApiClient.Client
         // endpoints (https://xboxapi.com/documentation)
         // TODO: add endpoints here
 
-        public virtual XboxUser GetUser(string gamerTag)
+        public virtual xbox_user GetUser(string gamerTag)
         {
             var requestDetails = new RestRequestDetails(HttpMethod.Get, apiResourceUrl + gamerTag + "/profile");
 
-            return GetSingle<XboxUser>(requestDetails);
+            return GetSingle<xbox_user>(requestDetails);
         }
 
-        public virtual List<XboxUser> GetFriends(string gamerTag)
+        public virtual List<xbox_user> GetFriends(string gamerTag)
         {
             var requestDetails = new RestRequestDetails(HttpMethod.Get, apiResourceUrl + gamerTag + "/friends");
 
-            return GetList<XboxUser>(requestDetails);
+            return GetList<xbox_user>(requestDetails);
         }
 
-        public virtual List<Activity> GetUserActivity(string gamerTag)
+        public virtual List<recent_activity> GetUserActivity(string gamerTag)
         {
             var requestDetails = new RestRequestDetails(HttpMethod.Get, apiResourceUrl + gamerTag + "/activity/recent");
 
-            return GetList<Activity>(requestDetails);
+            return GetList<recent_activity>(requestDetails);
         }
     }
 }
