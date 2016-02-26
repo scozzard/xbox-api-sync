@@ -41,6 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryService.cs" />
+    <Compile Include="Interfaces\ICategoryService.cs" />
+    <Compile Include="Interfaces\IGadgetService.cs" />
+    <Compile Include="Interfaces\IUserService.cs" />
+    <Compile Include="Interfaces\IXboxUserService.cs" />
     <Compile Include="UserService.cs" />
     <Compile Include="XboxUserService.cs" />
     <Compile Include="GadgetService.cs" />
@@ -54,6 +58,10 @@
     <ProjectReference Include="..\Scozzard.Respository\Scozzard.Respository.csproj">
       <Project>{a4c4d43f-2442-4758-be7d-0418153b3f4c}</Project>
       <Name>Scozzard.Respository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scozzard.XboxApiClient\Scozzard.XboxApiClient.csproj">
+      <Project>{b28491a5-1bba-4be7-bf3d-b82bd7365efc}</Project>
+      <Name>Scozzard.XboxApiClient</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

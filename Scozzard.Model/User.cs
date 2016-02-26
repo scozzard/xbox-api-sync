@@ -14,5 +14,6 @@ namespace Scozzard.Model
         public string Password { get; set; }
         public int XboxUserID { get; set; }
         public XboxUser XboxUser { get; set; }
+        public DateTime LastSynced { get; set; } // Should be UTC
     }
 }

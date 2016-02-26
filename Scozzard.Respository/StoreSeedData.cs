@@ -94,6 +94,7 @@ namespace Scozzard.Respository
                     Name = "Scott Walker",
                     Password = "1234",
                     Email = "scot.walker@gmail.com",
+                    LastSynced = DateTime.UtcNow,
                     XboxUser = new XboxUser
                     {
                         GamerTag = "scozzard",

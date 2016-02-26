@@ -1,24 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Scozzard.Model;
 using Scozzard.Respository.Infrastructure;
 using Scozzard.Respository.Repositories;
+using Scozzard.Service.Interfaces;
 
 namespace Scozzard.Service
 {
-    // operations you want to expose
-    public interface IGadgetService
-    {
-        IEnumerable<Gadget> GetGadgets();
-        IEnumerable<Gadget> GetCategoryGadgets(string categoryName, string gadgetName = null);
-        Gadget GetGadget(int id);
-        void CreateGadget(Gadget gadget);
-        void SaveGadget();
-    }
-
     public class GadgetService : IGadgetService
     {
         private readonly IGadgetRepository gadgetsRepository;

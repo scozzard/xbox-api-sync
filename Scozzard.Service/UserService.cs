@@ -1,24 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Scozzard.Model;
 using Scozzard.Respository.Infrastructure;
 using Scozzard.Respository.Repositories;
+using Scozzard.Service.Interfaces;
 
 namespace Scozzard.Service
 {
-    // operations you want to expose
-    public interface IUserService
-    {
-        IEnumerable<User> GetUsers();
-        User GetUser(int id);
-        User GetUser(string email, string password);
-        void CreateUser(User User);
-        void SaveUser();
-    }
-
     public class UserService : IUserService
     {
         private readonly IUserRepository UsersRepository;

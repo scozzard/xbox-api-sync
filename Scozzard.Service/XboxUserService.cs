@@ -1,24 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Scozzard.Model;
 using Scozzard.Respository.Infrastructure;
 using Scozzard.Respository.Repositories;
+using Scozzard.Service.Interfaces;
 
 namespace Scozzard.Service
 {
-    // operations you want to expose
-    public interface IXboxUserService
-    {
-        IEnumerable<XboxUser> GetXboxUsers();
-        XboxUser GetXboxUser(int id);
-        XboxUser GetXboxUser(string gamerTag);
-        void CreateXboxUser(XboxUser XboxUser);
-        void SaveXboxUser();
-    }
-
     public class XboxUserService : IXboxUserService
     {
         private readonly IXboxUserRepository XboxUsersRepository;

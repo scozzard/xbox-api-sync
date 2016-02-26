@@ -68,7 +68,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Client\RestResponseDetails.cs" />
     <Compile Include="Client\Interfaces\IRestRequestDetails.cs" />
     <Compile Include="Client\Interfaces\IRestResponseDetails.cs" />
