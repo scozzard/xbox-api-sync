@@ -10,7 +10,7 @@ namespace Scozzard.Respository.Repositories
 {
     public interface IXboxUserRepository : IRepository<XboxUser>
     {
-        XboxUser GetById(int id);
+        XboxUser GetById(long id);
         List<XboxUser> GetAll();
     }
 }

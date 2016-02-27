@@ -27,7 +27,7 @@ namespace Scozzard.Service
         public void SyncXboxUsers()
         {
             // get all xbox users that haven't been sync'ed in the last hour.
-            var xboxUsers = xboxUserService.GetXboxUsers().Where(x => x.LastSynced < DateTime.UtcNow.AddHours(-1));
+            var xboxUsers = xboxUserService.GetXboxUsers().Where(x => x.ProfileLastSyncedAt < DateTime.UtcNow.AddHours(-1));
 
             // get all xbox users linked with an account
             var userXboxUserIds = userService.GetUsers().Select(x => x.XboxUserID);
@@ -47,7 +47,7 @@ namespace Scozzard.Service
                 xboxUser.PreferredColor = apiXboxUser.PreferredColor;
                 xboxUser.AccountTier = apiXboxUser.AccountTier;
                 xboxUser.XboxOneRep = apiXboxUser.XboxOneRep;
-                xboxUser.LastSynced = DateTime.UtcNow;
+                xboxUser.ProfileLastSyncedAt = DateTime.UtcNow;
 
                 //----------------------------------------------------------------------//
                 // -- refresh xbox user friends --(for linked xbox user accounts only)--//
@@ -72,7 +72,8 @@ namespace Scozzard.Service
                         xboxUserFriend.PreferredColor = apiXboxUserFriendsDic[xboxUserFriend.XboxUserID].PreferredColor;
                         xboxUserFriend.AccountTier = apiXboxUserFriendsDic[xboxUserFriend.XboxUserID].AccountTier;
                         xboxUserFriend.XboxOneRep = apiXboxUserFriendsDic[xboxUserFriend.XboxUserID].XboxOneRep;
-                        xboxUserFriend.LastSynced = DateTime.UtcNow;
+                        xboxUserFriend.ProfileLastSyncedAt = DateTime.UtcNow;
+                        xboxUserFriend.ActivitiesLastSyncedAtt = xboxUserFriend.ActivitiesLastSyncedAtt;
                     }
 
                     // add new friends :)
@@ -86,14 +87,15 @@ namespace Scozzard.Service
                         AccountTier = x.AccountTier,
                         XboxOneRep = x.XboxOneRep,
                         PreferredColor = x.PreferredColor,
-                        LastSynced = DateTime.UtcNow
+                        ProfileLastSyncedAt = DateTime.UtcNow,
+                        ActivitiesLastSyncedAtt = DateTime.UtcNow.AddHours(-1)
                     }));
                 }
 
                 xboxUserService.UpdateXboxUser(xboxUser);
             }
 
-            xboxUserService.SaveXboxUser();
+            xboxUserService.Save();
         }
     }
 }

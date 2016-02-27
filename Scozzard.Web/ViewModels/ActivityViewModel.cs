@@ -12,7 +12,7 @@ namespace Scozzard.Web.ViewModels
         public DateTime StartTime { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
-        public int XboxUserID { get; set; }
+        public long XboxUserID { get; set; }
         public XboxUser XboxUser { get; set; }
     }
 }

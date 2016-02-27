@@ -25,6 +25,8 @@ namespace Scozzard.Respository.Configuration
 
             // XboxUserId is set as the xuid xboxapi provides (i.e, 2533274858439687)
             Property(e => e.XboxUserID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            Property(e => e.ActivitiesLastSyncedAtt).IsOptional();
+            Property(e => e.ProfileLastSyncedAt).IsOptional();
         }
     }
 }

@@ -104,7 +104,8 @@ namespace Scozzard.Respository
                         GameDisplayPicRaw = "http://avatar.xboxlive.com/avatar/scozzard/avatarpic-l.png",
                         AccountTier = "Gold",
                         XboxOneRep = "GoodPlayer",
-                        LastSynced = DateTime.UtcNow,
+                        ProfileLastSyncedAt = DateTime.UtcNow.AddDays(-2),
+                        ActivitiesLastSyncedAtt = DateTime.UtcNow.AddDays(-2),
                         Friends = new List<XboxUser>()
                         {
                             new XboxUser()
@@ -116,7 +117,8 @@ namespace Scozzard.Respository
                                     GameDisplayPicRaw = "http://avatar.xboxlive.com/avatar/sannestorm/avatarpic-l.png",
                                     AccountTier = "Gold",
                                     XboxOneRep = "GoodPlayer",
-                                    LastSynced = DateTime.UtcNow,
+                                    ProfileLastSyncedAt = DateTime.UtcNow.AddDays(-2),
+                                    ActivitiesLastSyncedAtt = DateTime.UtcNow.AddDays(-2),
                                     Activities = new List<Activity>()
                                     {
                                         new Activity()
@@ -142,7 +144,8 @@ namespace Scozzard.Respository
                                     GameDisplayPicRaw = "http://avatar.xboxlive.com/avatar/dustwolf83/avatarpic-l.png",
                                     AccountTier = "Gold",
                                     XboxOneRep = "GoodPlayer",
-                                    LastSynced = DateTime.UtcNow,
+                                    ProfileLastSyncedAt = DateTime.UtcNow.AddDays(-2),
+                                    ActivitiesLastSyncedAtt = DateTime.UtcNow.AddDays(-2),
                                     Activities = new List<Activity>()
                                     {
                                         new Activity()
@@ -192,7 +195,7 @@ namespace Scozzard.Respository
                     GameDisplayPicRaw = "http://avatar.xboxlive.com/avatar/scozzard/avatarpic-l.png",
                     AccountTier = "Gold",
                     XboxOneRep = "GoodPlayer",
-                    LastSynced = DateTime.UtcNow,
+                    ProfileLastSyncedAt = DateTime.UtcNow,
                     Friends = new List<XboxUser>()
                     {
                         new XboxUser()
@@ -203,7 +206,7 @@ namespace Scozzard.Respository
                                 GameDisplayPicRaw = "http://avatar.xboxlive.com/avatar/sannestorm/avatarpic-l.png",
                                 AccountTier = "Gold",
                                 XboxOneRep = "GoodPlayer",
-                                LastSynced = DateTime.UtcNow,
+                                ProfileLastSyncedAt = DateTime.UtcNow,
                                 Activities = new List<Activity>()
                                 {
                                     new Activity()
@@ -228,7 +231,7 @@ namespace Scozzard.Respository
                                 GameDisplayPicRaw = "http://avatar.xboxlive.com/avatar/dustwolf83/avatarpic-l.png",
                                 AccountTier = "Gold",
                                 XboxOneRep = "GoodPlayer",
-                                LastSynced = DateTime.UtcNow,
+                                ProfileLastSyncedAt = DateTime.UtcNow,
                                 Activities = new List<Activity>()
                                 {
                                     new Activity()

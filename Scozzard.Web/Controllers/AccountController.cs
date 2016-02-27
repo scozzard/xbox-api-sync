@@ -14,12 +14,14 @@ namespace Scozzard.Web.Controllers
         private readonly IUserService userService;
         private readonly IXboxUserService xboxUserService;
         private readonly ISyncXboxUsersService syncXboxUserService;
+        private readonly ISyncActivityService syncActivityService;
 
-        public AccountController(IUserService userService, IXboxUserService xboxUserService, ISyncXboxUsersService syncXboxUserService)
+        public AccountController(IUserService userService, IXboxUserService xboxUserService, ISyncXboxUsersService syncXboxUserService, ISyncActivityService syncActivityService)
         {
             this.userService = userService;
             this.xboxUserService = xboxUserService;
             this.syncXboxUserService = syncXboxUserService;
+            this.syncActivityService = syncActivityService;
         }
 
         public ActionResult Login()
@@ -61,9 +63,11 @@ namespace Scozzard.Web.Controllers
 
         public ActionResult MyProfile()
         {
+            // TODO: purely for testing DELETE!!
             /* being testing sync */
 
             syncXboxUserService.SyncXboxUsers();
+            syncActivityService.SyncActivity();
 
             /* end testing sync */
 

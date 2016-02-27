@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tasks", "Tasks", "{E6FBEE8C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scozzard.Task.SyncUser", "Scozzard.Task.SyncUser\Scozzard.Task.SyncUser.csproj", "{81B6F450-8F40-4BB4-AAD5-F6FDD4B193D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scozzard.Task.SyncActivity", "Scozzard.Task.SyncActivity\Scozzard.Task.SyncActivity.csproj", "{51C37BD0-9689-4334-8B58-C24973CAD163}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,11 +49,16 @@ Global
 		{81B6F450-8F40-4BB4-AAD5-F6FDD4B193D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81B6F450-8F40-4BB4-AAD5-F6FDD4B193D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81B6F450-8F40-4BB4-AAD5-F6FDD4B193D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51C37BD0-9689-4334-8B58-C24973CAD163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C37BD0-9689-4334-8B58-C24973CAD163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C37BD0-9689-4334-8B58-C24973CAD163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C37BD0-9689-4334-8B58-C24973CAD163}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{81B6F450-8F40-4BB4-AAD5-F6FDD4B193D8} = {E6FBEE8C-6C66-4598-A96A-367FB1E78E3D}
+		{51C37BD0-9689-4334-8B58-C24973CAD163} = {E6FBEE8C-6C66-4598-A96A-367FB1E78E3D}
 	EndGlobalSection
 EndGlobal

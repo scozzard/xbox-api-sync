@@ -18,6 +18,7 @@ namespace Scozzard.Model
         public string PreferredColor { get; set; }
         public List<XboxUser> Friends { get; set; }
         public List<Activity> Activities { get; set; }
-        public DateTime LastSynced { get; set; }
+        public DateTime ProfileLastSyncedAt { get; set; }
+        public DateTime ActivitiesLastSyncedAtt { get; set; }
     }
 }

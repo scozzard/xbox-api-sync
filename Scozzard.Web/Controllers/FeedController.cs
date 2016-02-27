@@ -12,10 +12,12 @@ namespace Scozzard.Web.Controllers
     public class FeedController : Controller
     {
         private readonly IXboxUserService xboxUserService;
+        private readonly IUserService userService;
 
-        public FeedController(IXboxUserService xboxUserService)
+        public FeedController(IXboxUserService xboxUserService, IUserService userService)
         {
             this.xboxUserService = xboxUserService;
+            this.userService = userService;
         }
 
         // GET: Home
@@ -23,10 +25,11 @@ namespace Scozzard.Web.Controllers
         public ActionResult Index(string category = null)
         {
             var userId = int.Parse(HttpContext.User.Identity.GetUserId());
+            var user = userService.GetUser(userId);
 
             IEnumerable<ActivityViewModel> activityViewModels;
 
-            var xboxUser = xboxUserService.GetXboxUser(userId);
+            var xboxUser = xboxUserService.GetXboxUser(user.XboxUserID);
             var userActivities = xboxUser.Activities;
             var friendsActivities = xboxUser.Friends.SelectMany(a => a.Activities);
 

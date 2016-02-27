@@ -14,7 +14,7 @@ namespace Scozzard.Respository.Repositories
             : base(dbFactory)
         {}
 
-        public XboxUser GetById(int id)
+        public XboxUser GetById(long id)
         {
             return this.DbContext
                 .XboxUsers

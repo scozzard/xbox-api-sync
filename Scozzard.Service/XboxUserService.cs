@@ -17,15 +17,13 @@ namespace Scozzard.Service
             this.unitOfWork = unitOfWork;
         }
 
-        #region IXboxUserService Members
-
         public IEnumerable<XboxUser> GetXboxUsers()
         {
             var XboxUsers = xboxUsersRepository.GetAll();
             return XboxUsers;
         }
 
-        public XboxUser GetXboxUser(int id)
+        public XboxUser GetXboxUser(long id)
         {
             var XboxUser = xboxUsersRepository.GetById(id);
             return XboxUser;
@@ -47,12 +45,9 @@ namespace Scozzard.Service
             xboxUsersRepository.Update(xboxUser);
         }
 
-        public void SaveXboxUser()
+        public void Save()
         {
             unitOfWork.Commit();
         }
-
-        #endregion
-
     }
 }

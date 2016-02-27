@@ -10,10 +10,10 @@ namespace Scozzard.Service.Interfaces
     public interface IXboxUserService
     {
         IEnumerable<XboxUser> GetXboxUsers();
-        XboxUser GetXboxUser(int id);
+        XboxUser GetXboxUser(long id);
         XboxUser GetXboxUser(string gamerTag);
         void CreateXboxUser(XboxUser xboxUser);
         void UpdateXboxUser(XboxUser xboxUser);
-        void SaveXboxUser();
+        void Save();
     }
 }
