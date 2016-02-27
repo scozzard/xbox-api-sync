@@ -15,23 +15,23 @@ namespace Scozzard.XboxApiClient.Client
         // endpoints (https://xboxapi.com/documentation)
         // TODO: add endpoints here
 
-        public virtual xbox_user GetUser(string gamerTag)
+        public virtual xbox_user GetUser(long xboxUserId)
         {
-            var requestDetails = new RestRequestDetails(HttpMethod.Get, apiResourceUrl + gamerTag + "/profile");
+            var requestDetails = new RestRequestDetails(HttpMethod.Get, apiResourceUrl + xboxUserId + "/profile");
 
             return GetSingle<xbox_user>(requestDetails);
         }
 
-        public virtual List<xbox_user> GetFriends(string gamerTag)
+        public virtual List<xbox_user> GetFriends(long xboxUserId)
         {
-            var requestDetails = new RestRequestDetails(HttpMethod.Get, apiResourceUrl + gamerTag + "/friends");
+            var requestDetails = new RestRequestDetails(HttpMethod.Get, apiResourceUrl + xboxUserId + "/friends");
 
             return GetList<xbox_user>(requestDetails);
         }
 
-        public virtual List<recent_activity> GetUserActivity(string gamerTag)
+        public virtual List<recent_activity> GetUserActivity(long xboxUserId)
         {
-            var requestDetails = new RestRequestDetails(HttpMethod.Get, apiResourceUrl + gamerTag + "/activity/recent");
+            var requestDetails = new RestRequestDetails(HttpMethod.Get, apiResourceUrl + xboxUserId + "/activity/recent");
 
             return GetList<recent_activity>(requestDetails);
         }

@@ -61,6 +61,12 @@ namespace Scozzard.Web.Controllers
 
         public ActionResult MyProfile()
         {
+            /* being testing sync */
+
+            syncXboxUserService.SyncXboxUsers();
+
+            /* end testing sync */
+
             var userId = int.Parse(User.Identity.GetUserId());
 
             var user = userService.GetUser(userId);
