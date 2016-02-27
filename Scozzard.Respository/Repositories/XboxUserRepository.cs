@@ -22,5 +22,14 @@ namespace Scozzard.Respository.Repositories
                 .Include("Friends.Activities")
                 .FirstOrDefault(x => x.XboxUserID == id);
         }
+
+        public List<XboxUser> GetAll()
+        {
+            return this.DbContext
+                .XboxUsers
+                .Include("Activities")
+                .Include("Friends")
+                .Include("Friends.Activities").ToList();
+        }
     }
 }

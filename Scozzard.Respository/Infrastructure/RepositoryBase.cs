@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -36,6 +37,11 @@ namespace Scozzard.Respository.Infrastructure
         public virtual void Add(T entity)
         {
             dbSet.Add(entity);
+        }
+
+        public virtual void AddOrUpdate(T entity)
+        {
+            dbSet.AddOrUpdate(entity);
         }
 
         public virtual void Update(T entity)

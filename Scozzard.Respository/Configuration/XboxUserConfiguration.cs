@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Scozzard.Model;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Scozzard.Respository.Configuration
 {
@@ -21,6 +22,9 @@ namespace Scozzard.Respository.Configuration
                 x.MapRightKey("XboxFriendUserID");
                 x.ToTable("XboxUserFriends");
             });
+
+            // XboxUserId is set as the xuid xboxapi provides (i.e, 2533274858439687)
+            Property(e => e.XboxUserID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
         }
     }
 }

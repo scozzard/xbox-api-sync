@@ -12,7 +12,8 @@ namespace Scozzard.Service.Interfaces
         IEnumerable<XboxUser> GetXboxUsers();
         XboxUser GetXboxUser(int id);
         XboxUser GetXboxUser(string gamerTag);
-        void CreateXboxUser(XboxUser XboxUser);
+        void CreateXboxUser(XboxUser xboxUser);
+        void UpdateXboxUser(XboxUser xboxUser);
         void SaveXboxUser();
     }
 }

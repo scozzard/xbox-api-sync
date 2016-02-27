@@ -91,28 +91,32 @@ namespace Scozzard.Respository
             {
                 new User()
                 {
+                    XboxUserID = 2533274858439687,
                     Name = "Scott Walker",
                     Password = "1234",
                     Email = "scot.walker@gmail.com",
-                    LastSynced = DateTime.UtcNow,
                     XboxUser = new XboxUser
                     {
+                        XboxUserID = 2533274858439687,
                         GamerTag = "scozzard",
                         GameDisplayName = "scozzard",
                         Gamerscore = 22230,
                         GameDisplayPicRaw = "http://avatar.xboxlive.com/avatar/scozzard/avatarpic-l.png",
                         AccountTier = "Gold",
                         XboxOneRep = "GoodPlayer",
+                        LastSynced = DateTime.UtcNow,
                         Friends = new List<XboxUser>()
                         {
                             new XboxUser()
                                 {
+                                    XboxUserID = 2533274966272821,
                                     GamerTag = "sannestorm",
                                     GameDisplayName = "sannestorm",
                                     Gamerscore = 1123,
                                     GameDisplayPicRaw = "http://avatar.xboxlive.com/avatar/sannestorm/avatarpic-l.png",
                                     AccountTier = "Gold",
                                     XboxOneRep = "GoodPlayer",
+                                    LastSynced = DateTime.UtcNow,
                                     Activities = new List<Activity>()
                                     {
                                         new Activity()
@@ -131,12 +135,14 @@ namespace Scozzard.Respository
                                 },
                             new XboxUser()
                                 {
-                                    GamerTag = "dustwolf83",
-                                    GameDisplayName = "dustwolf83",
+                                    XboxUserID = 2533274903999153,
+                                    GamerTag = "TopsidePlague18",
+                                    GameDisplayName = "TopsidePlague18",
                                     Gamerscore = 15200,
                                     GameDisplayPicRaw = "http://avatar.xboxlive.com/avatar/dustwolf83/avatarpic-l.png",
                                     AccountTier = "Gold",
                                     XboxOneRep = "GoodPlayer",
+                                    LastSynced = DateTime.UtcNow,
                                     Activities = new List<Activity>()
                                     {
                                         new Activity()
@@ -186,6 +192,7 @@ namespace Scozzard.Respository
                     GameDisplayPicRaw = "http://avatar.xboxlive.com/avatar/scozzard/avatarpic-l.png",
                     AccountTier = "Gold",
                     XboxOneRep = "GoodPlayer",
+                    LastSynced = DateTime.UtcNow,
                     Friends = new List<XboxUser>()
                     {
                         new XboxUser()
@@ -196,6 +203,7 @@ namespace Scozzard.Respository
                                 GameDisplayPicRaw = "http://avatar.xboxlive.com/avatar/sannestorm/avatarpic-l.png",
                                 AccountTier = "Gold",
                                 XboxOneRep = "GoodPlayer",
+                                LastSynced = DateTime.UtcNow,
                                 Activities = new List<Activity>()
                                 {
                                     new Activity()
@@ -220,6 +228,7 @@ namespace Scozzard.Respository
                                 GameDisplayPicRaw = "http://avatar.xboxlive.com/avatar/dustwolf83/avatarpic-l.png",
                                 AccountTier = "Gold",
                                 XboxOneRep = "GoodPlayer",
+                                LastSynced = DateTime.UtcNow,
                                 Activities = new List<Activity>()
                                 {
                                     new Activity()

@@ -42,7 +42,7 @@ namespace Scozzard.XboxApiClient.Client
                 var requestMessage = requestDetails.ToHttpRequestMessage();
 
                 // move to config
-                requestMessage.Headers.Add("X-AUTH", "4f5172b69e6510cb40c7b813f60cfef3dd5f1de0");
+                requestMessage.Headers.Add("X-AUTH", "fa0b97bb037d0decef75cf9c9693ffb5d5878118");
 
                 httpResponseMessage = client.SendAsync(requestMessage).Result;
                 var responseContent = httpResponseMessage.Content.ReadAsStringAsync().Result;

@@ -13,11 +13,13 @@ namespace Scozzard.Web.Controllers
     {
         private readonly IUserService userService;
         private readonly IXboxUserService xboxUserService;
+        private readonly ISyncXboxUsersService syncXboxUserService;
 
-        public AccountController(IUserService userService, IXboxUserService xboxUserService)
+        public AccountController(IUserService userService, IXboxUserService xboxUserService, ISyncXboxUsersService syncXboxUserService)
         {
             this.userService = userService;
             this.xboxUserService = xboxUserService;
+            this.syncXboxUserService = syncXboxUserService;
         }
 
         public ActionResult Login()

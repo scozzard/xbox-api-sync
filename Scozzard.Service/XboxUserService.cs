@@ -8,12 +8,12 @@ namespace Scozzard.Service
 {
     public class XboxUserService : IXboxUserService
     {
-        private readonly IXboxUserRepository XboxUsersRepository;
+        private readonly IXboxUserRepository xboxUsersRepository;
         private readonly IUnitOfWork unitOfWork;
 
         public XboxUserService(IXboxUserRepository XboxUsersRepository, IUnitOfWork unitOfWork)
         {
-            this.XboxUsersRepository = XboxUsersRepository;
+            this.xboxUsersRepository = XboxUsersRepository;
             this.unitOfWork = unitOfWork;
         }
 
@@ -21,25 +21,30 @@ namespace Scozzard.Service
 
         public IEnumerable<XboxUser> GetXboxUsers()
         {
-            var XboxUsers = XboxUsersRepository.GetAll();
+            var XboxUsers = xboxUsersRepository.GetAll();
             return XboxUsers;
         }
 
         public XboxUser GetXboxUser(int id)
         {
-            var XboxUser = XboxUsersRepository.GetById(id);
+            var XboxUser = xboxUsersRepository.GetById(id);
             return XboxUser;
         }
 
         public XboxUser GetXboxUser(string gamertag)
         {
-            var XboxUser = XboxUsersRepository.Get(x => x.GamerTag == gamertag);
+            var XboxUser = xboxUsersRepository.Get(x => x.GamerTag == gamertag);
             return XboxUser;
         }
 
         public void CreateXboxUser(XboxUser XboxUser)
         {
-            XboxUsersRepository.Add(XboxUser);
+            xboxUsersRepository.Add(XboxUser);
+        }
+
+        public void UpdateXboxUser(XboxUser xboxUser)
+        {
+            xboxUsersRepository.Update(xboxUser);
         }
 
         public void SaveXboxUser()

@@ -10,6 +10,7 @@ using Scozzard.Respository.Infrastructure;
 using Scozzard.Respository.Repositories;
 using Scozzard.Service;
 using Scozzard.Web.Mappings;
+using Scozzard.XboxApiClient.Client;
 
 namespace Scozzard.Web.App_Start
 {
@@ -30,13 +31,27 @@ namespace Scozzard.Web.App_Start
             builder.RegisterType<DbFactory>().As<IDbFactory>().InstancePerRequest();
 
             // Repositories
-            builder.RegisterAssemblyTypes(typeof(GadgetRepository).Assembly)
+            builder.RegisterAssemblyTypes(
+                typeof(GadgetRepository).Assembly,
+                typeof(CategoryRepository).Assembly,
+                typeof(UserRepository).Assembly,
+                typeof(XboxUserRepository).Assembly)
                 .Where(t => t.Name.EndsWith("Repository"))
                 .AsImplementedInterfaces().InstancePerRequest();
+            
             // Services
-            builder.RegisterAssemblyTypes(typeof(GadgetService).Assembly)
+            builder.RegisterAssemblyTypes(
+                typeof(GadgetService).Assembly,
+                typeof(CategoryService).Assembly,
+                typeof(UserService).Assembly,
+                typeof(XboxUserService).Assembly,
+                typeof(SyncXboxUsersService).Assembly)
                .Where(t => t.Name.EndsWith("Service"))
                .AsImplementedInterfaces().InstancePerRequest();
+
+            // XboxApi
+            builder.RegisterAssemblyTypes(
+                typeof(XboxApi).Assembly);
 
             IContainer container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

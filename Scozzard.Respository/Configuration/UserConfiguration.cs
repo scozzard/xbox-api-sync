@@ -13,7 +13,7 @@ namespace Scozzard.Respository.Configuration
         public UserConfiguration()
         {
             ToTable("User");
-            Property(g => g.Name).IsRequired().HasMaxLength(50);
+            Property(g => g.Name).IsRequired().HasMaxLength(60);
             Property(g => g.Password).IsRequired();
             Property(g => g.Email).IsRequired();
             Property(g => g.XboxUserID).IsRequired();

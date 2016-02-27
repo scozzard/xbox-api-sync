@@ -8,7 +8,7 @@ namespace Scozzard.Model
 {
     public class XboxUser
     {
-        public int XboxUserID { get; set; }
+        public long XboxUserID { get; set; }
         public string GamerTag { get; set; }
         public string GameDisplayName { get; set; }
         public int Gamerscore { get; set; }
@@ -18,5 +18,6 @@ namespace Scozzard.Model
         public string PreferredColor { get; set; }
         public List<XboxUser> Friends { get; set; }
         public List<Activity> Activities { get; set; }
+        public DateTime LastSynced { get; set; }
     }
 }
