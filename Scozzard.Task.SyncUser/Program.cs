@@ -18,18 +18,20 @@ namespace Scozzard.Task.SyncUser
         {
             var builder = new ContainerBuilder();
 
-            builder.Register(o => new SyncXboxUsersService(o.Resolve<XboxApi>(), o.Resolve<IXboxUserService>(), o.Resolve<IUserService>()));
-            builder.RegisterType<XboxApi>();
-            builder.RegisterType<XboxUserService>().As<IXboxUserService>();
-            builder.RegisterType<UserService>().As<IUserService>();
-            builder.RegisterType<XboxUserRepository>().As<IXboxUserRepository>();
-            builder.RegisterType<UserRepository>().As<IUserRepository>();
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
-            builder.RegisterType<DbFactory>().As<IDbFactory>();
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().SingleInstance();
+            builder.RegisterType<DbFactory>().As<IDbFactory>().SingleInstance();
+            builder.RegisterType<XboxApi>().SingleInstance();
+            builder.RegisterType<XboxUserRepository>().As<IXboxUserRepository>().SingleInstance();
+            builder.RegisterType<UserRepository>().As<IUserRepository>().SingleInstance();
+            builder.RegisterType<UserService>().As<IUserService>().SingleInstance();
+            builder.RegisterType<XboxUserService>().As<IXboxUserService>().SingleInstance();
+            builder.RegisterType<SyncXboxUsersService>().As<ISyncXboxUsersService>().SingleInstance();
+
+            builder.Register(o => new SyncXboxUsersService(o.Resolve<XboxApi>(), o.Resolve<IXboxUserService>(), o.Resolve<IUserService>())).SingleInstance();
 
             using (var container = builder.Build())
             {
-                container.Resolve<SyncXboxUsersService>().SyncXboxUsers();
+                container.Resolve<ISyncXboxUsersService>().SyncXboxUsers();
             }
         }
     }

@@ -18,13 +18,16 @@ namespace Scozzard.Task.SyncActivity
         {
             var builder = new ContainerBuilder();
 
-            builder.Register(o => new SyncActivityService(o.Resolve<IXboxUserService>(), o.Resolve<IActivityService>(), o.Resolve<XboxApi>()));
-            builder.RegisterType<XboxApi>();
-            builder.RegisterType<XboxUserService>().As<IXboxUserService>();
-            builder.RegisterType<XboxUserRepository>().As<IXboxUserRepository>();
-            builder.RegisterType<ActivityService>().As<IActivityService>();
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
-            builder.RegisterType<DbFactory>().As<IDbFactory>();
+            builder.RegisterType<DbFactory>().As<IDbFactory>().SingleInstance();
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().SingleInstance();
+            builder.RegisterType<XboxApi>().SingleInstance();
+            builder.RegisterType<XboxUserRepository>().As<IXboxUserRepository>().SingleInstance();
+            builder.RegisterType<ActivityRepository>().As<IActivityRepository>().SingleInstance();
+            builder.RegisterType<XboxUserService>().As<IXboxUserService>().SingleInstance();
+            builder.RegisterType<ActivityService>().As<IActivityService>().SingleInstance();
+
+            builder.Register(o => new SyncActivityService(o.Resolve<IXboxUserService>(), o.Resolve<IActivityService>(), o.Resolve<XboxApi>())).SingleInstance();
+
 
             using (var container = builder.Build())
             {
