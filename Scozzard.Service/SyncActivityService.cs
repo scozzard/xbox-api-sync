@@ -41,6 +41,8 @@ namespace Scozzard.Service
                         Description = activity.description,
                         ImageUrl = activity.itemImage,
                         XboxUserID = xboxUser.XboxUserID,
+                        Platform = activity.platform,
+                        ContentType = activity.contentType,
                         XboxUser = xboxUser
                     });
                 }

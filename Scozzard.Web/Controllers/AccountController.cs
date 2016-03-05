@@ -66,8 +66,8 @@ namespace Scozzard.Web.Controllers
             // TODO: purely for testing DELETE!!
             /* being testing sync */
 
-            syncXboxUserService.SyncXboxUsers();
-            syncActivityService.SyncActivity();
+            //syncXboxUserService.SyncXboxUsers();
+            //syncActivityService.SyncActivity();
 
             /* end testing sync */
 

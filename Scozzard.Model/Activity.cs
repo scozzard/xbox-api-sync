@@ -13,6 +13,8 @@ namespace Scozzard.Model
         public string Description { get; set; }
         public string ImageUrl { get; set; }
         public long XboxUserID { get; set; }
+        public string Platform { get; set; } //TODO: could be enum
+        public string ContentType { get; set; } //TODO: couldbe enum
         public XboxUser XboxUser { get; set; }
     }
 }

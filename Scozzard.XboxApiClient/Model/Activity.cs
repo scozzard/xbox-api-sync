@@ -21,7 +21,7 @@ namespace Scozzard.XboxApiClient.Model
         public DateTime date { get; set; }
 	    public string activityItemType { get; set; } //TODO: enum
 	    public string contentType { get; set; } //TODO: enum
-	    public string shortDescription { get; set; } //TODO: could be an enum...
+	    public string shortDescription { get; set; }
 	    public string itemText { get; set; }
 	    public string itemImage { get; set; }
 	    public string shareRoot { get; set; }
