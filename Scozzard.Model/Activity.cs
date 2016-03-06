@@ -10,7 +10,8 @@ namespace Scozzard.Model
     {
         public int ActivityID { get; set; }
         public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        public DateTime? EndTime { get; set; }
+        public int SessionDurationInMinutes { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
         public long XboxUserID { get; set; }

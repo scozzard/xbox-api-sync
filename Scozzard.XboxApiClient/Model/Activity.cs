@@ -9,7 +9,7 @@ namespace Scozzard.XboxApiClient.Model
     public class recent_activity
     {
         public DateTime startTime { get; set; }
-	    public DateTime endTime { get; set; }
+	    public DateTime? endTime { get; set; }
 	    public int sessionDurationInMinutes { get; set; }
 	    public string contentImageUri { get; set; }
 	    public string bingId { get; set; }

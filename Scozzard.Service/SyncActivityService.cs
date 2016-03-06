@@ -38,6 +38,8 @@ namespace Scozzard.Service
                     activityService.CreateActivity(new Activity()
                     {
                         StartTime = activity.startTime,
+                        EndTime = activity.endTime,
+                        SessionDurationInMinutes = activity.sessionDurationInMinutes,
                         Description = activity.description,
                         ImageUrl = activity.itemImage,
                         XboxUserID = xboxUser.XboxUserID,

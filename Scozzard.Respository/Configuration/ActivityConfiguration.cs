@@ -15,6 +15,8 @@ namespace Scozzard.Respository.Configuration
             ToTable("Activity");
             Property(g => g.XboxUserID).IsRequired();
             Property(g => g.Description).IsRequired();
+            Property(g => g.EndTime).IsOptional();
+            Property(g => g.SessionDurationInMinutes).IsOptional();
         }
     }
 }

@@ -9,7 +9,7 @@
             <img class="media-object pull-left" style="height:64px; width:64px" src="@Model.ImageUrl" />
         </div>
         <div class="media-body">
-            <small class="small">@Model.StartTime.ToString("F")</small>
+            <small class="small"><strong>@Model.StartTime.ToShortDateString()</strong> - @Model.StartTime.ToString("hh:mm tt") @(Model.EndTime.HasValue ? Html.Raw("to " + @Model.EndTime.Value.ToString("hh:mm tt")) : Html.Raw("")) (@Model.SessionDurationInMinutes minutes)</small>
             <p>
                 @Model.XboxUser.GameDisplayName @Model.Description
             </p>
