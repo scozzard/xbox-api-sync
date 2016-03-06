@@ -16,6 +16,7 @@ namespace Scozzard.Model
         public string AccountTier { get; set; }
         public string XboxOneRep { get; set; }
         public string PreferredColor { get; set; }
+        public int TenureLevel { get; set; }
         public List<XboxUser> Friends { get; set; }
         public List<Activity> Activities { get; set; }
         public DateTime ProfileLastSyncedAt { get; set; }

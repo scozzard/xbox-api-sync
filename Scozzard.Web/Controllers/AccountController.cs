@@ -45,7 +45,10 @@ namespace Scozzard.Web.Controllers
                         new Claim(ClaimTypes.Name,user.Name),
                         new Claim("ProfileImageUrl", user.XboxUser.GameDisplayPicRaw),
                         new Claim("Gamerscore", user.XboxUser.Gamerscore.ToString()),
-                        new Claim("GamerTag", user.XboxUser.GamerTag)
+                        new Claim("GamerTag", user.XboxUser.GamerTag),
+                        new Claim("TenureLevel", user.XboxUser.TenureLevel.ToString()),
+                        new Claim("XboxOneRep", user.XboxUser.XboxOneRep),
+                        new Claim("AccountTier", user.XboxUser.AccountTier)
                     },
                     DefaultAuthenticationTypes.ApplicationCookie);
 
@@ -63,14 +66,6 @@ namespace Scozzard.Web.Controllers
 
         public ActionResult MyProfile()
         {
-            // TODO: purely for testing DELETE!!
-            /* being testing sync */
-
-            //syncXboxUserService.SyncXboxUsers();
-            //syncActivityService.SyncActivity();
-
-            /* end testing sync */
-
             var userId = int.Parse(User.Identity.GetUserId());
 
             var user = userService.GetUser(userId);

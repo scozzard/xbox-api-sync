@@ -5,18 +5,31 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container">
-    <div class="jumbotron">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-2">
+            <div class="jumbotron" style="padding: 20px 20px 20px 20px">
+                @Html.Partial("_UserPartial")
+            </div>            
+        </div>
 
-        @foreach (var activity in Model)
-        {
-            <div class="panel panel-default">
-                @Html.Partial("Activity", activity)
+        <div class="col-xs-6">
+            <div class="jumbotron" style="padding: 20px 20px 20px 20px">
+                @foreach (var activity in Model)
+            {
+                    <div class="panel panel-default">
+                        @Html.Partial("Activity", activity)
+                    </div>
+                }
             </div>
-        }
+        </div>
 
+        <div class="col-xs-4">
+            <div class="jumbotron" style="padding: 20px 20px 20px 20px">
+                <img src="images/download.png" />
+            </div>
+        </div>
     </div>
-
 </div>
 
 

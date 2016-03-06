@@ -8,15 +8,10 @@
 
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
-        <section style="position:absolute; top:10px; right:10px; padding: 5px 10px 0px 10px; border:1px solid; background-color: #06991c">
-            <div style="float:left">
-                <img src="@claimsUser.Claims.First(x => x.Type == "ProfileImageUrl").Value" />
-            </div>
+        <section style="position:absolute; top:10px; right:10px; padding: 5px 10px 0px 10px;">
             <div style="float:left; padding: 0px 10px 0px 10px">
                 <p style="color:white">
-                    @claimsUser.Claims.First(x => x.Type == "GamerTag").Value<br />
-                    @claimsUser.Claims.First(x => x.Type == "Gamerscore").Value<br />
-                    <a href="javascript:document.getElementById('logoutForm').submit()">Sign out</a>
+                    <span style="color:white;font-weight:bold"><a href="javascript:document.getElementById('logoutForm').submit()">SIGN OUT</a></span>
                 </p>
             </div>
         </section>
@@ -27,7 +22,7 @@ else
     <section style="position:absolute; top:10px; right:10px; padding: 5px 10px 0px 10px;">
         <div style="float:left; padding: 0px 10px 0px 10px">
             <p style="color:white">
-                @Html.ActionLink("Sign in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+                <span style="color:white;font-weight:bold">@Html.ActionLink("SIGN IN", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</span>
             </p>
         </div>
     </section>

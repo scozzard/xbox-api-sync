@@ -222,6 +222,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Account\MyProfile.cshtml" />
     <Content Include="packages.config" />
+    <Content Include="Views\Shared\_FeedLayout.cshtml" />
+    <Content Include="Views\Shared\_UserPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

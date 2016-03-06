@@ -86,6 +86,7 @@ namespace Scozzard.Service
                         GameDisplayPicRaw = x.GameDisplayPicRaw,
                         AccountTier = x.AccountTier,
                         XboxOneRep = x.XboxOneRep,
+                        TenureLevel = x.TenureLevel,
                         PreferredColor = x.PreferredColor,
                         ProfileLastSyncedAt = DateTime.UtcNow,
                         ActivitiesLastSyncedAtt = DateTime.UtcNow.AddHours(-1)
