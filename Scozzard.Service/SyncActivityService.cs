@@ -25,7 +25,7 @@ namespace Scozzard.Service
         public void SyncActivity()
         {
             // get all xbox users that haven't been sync'ed in the last hour.
-            var xboxUsers = xboxUserService.GetXboxUsers().Where(x => x.ActivitiesLastSyncedAtt < DateTime.UtcNow.AddHours(-1));
+            var xboxUsers = xboxUserService.GetXboxUsers().Where(x => x.ActivitiesLastSyncedAtt < DateTime.UtcNow.AddMinutes(-5));
 
             foreach (var xboxUser in xboxUsers)
             {

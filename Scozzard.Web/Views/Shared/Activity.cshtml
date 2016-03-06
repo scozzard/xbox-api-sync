@@ -3,12 +3,11 @@
 
 <div class="panel-body">
     <div class="media">
-        <a class="pull-left" href="#">
-            <img class="media-object" style="height:64px; width:64px" src="@Model.XboxUser.GameDisplayPicRaw" />
-        </a>
-        <a class="pull-left" href="#">
-            <img class="media-object" style="height:64px; width:64px" src="@Model.ImageUrl" />
-        </a>
+        <div class="pull-left" style="vertical-align:central">
+            <img class="media-object pull-left" style="height:64px; width:64px" src="@Model.XboxUser.GameDisplayPicRaw" />
+            <img class="media-object pull-left"  src="images/arrow-right.png" style="height:20px; width:20px; margin-top:20px; margin-left:10px; margin-right:10px" />
+            <img class="media-object pull-left" style="height:64px; width:64px" src="@Model.ImageUrl" />
+        </div>
         <div class="media-body">
             <small class="small">@Model.StartTime.ToString("F")</small>
             <p>
