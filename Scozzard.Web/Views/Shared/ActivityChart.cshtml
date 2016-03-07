@@ -1,0 +1,61 @@
+﻿@using Microsoft.AspNet.Identity;
+@using System.Security.Claims;
+@using Scozzard.Service;
+
+@{
+    var claimsUser = (ClaimsPrincipal)User;
+}
+
+<script src="~/Scripts/Chart.js"></script>
+<script type="text/javascript">
+function chartActivity() {
+        $.ajax({
+            url: '@Url.Action("UserAndFriendsWeeklyActivity", "AjaxActivity")',
+            cache: true
+        })
+        .done(function (data) {
+            var options = {
+                multiTooltipTemplate: "<%= datasetLabel %> - <%= value %>"
+            };
+            var mybarChartLoc = new Chart(document.getElementById("barChartLoc").getContext("2d")).Line(data, options);
+        })
+        .fail(function () {
+            alert("Ajax failed to fetch data");
+        });
+    }
+
+ $(document).ready(function () {
+        //auto load on page load
+        chartActivity();
+});
+</script>
+
+<style type="text/css">
+    dl {
+        background: #fff;
+        padding: 5px 15px 0px 20px;
+    }
+
+    dt, dd {
+        display: inline;
+    }
+
+    dd {
+        margin-right:20px;
+    }
+</style>
+
+
+
+<div style="width:100%; background-color:#FFFFFF; padding: 10px 10px 10px 10px">
+    <canvas id="barChartLoc" width="500" height="250"></canvas>
+    <div>
+        <dl>
+            <dt><img src="images/my-activity.gif" /></dt>
+            <dd>My Activity</dd>
+
+            <dt><img src="images/friends-activity.gif" /></dt>
+            <dd>Friends Activity</dd>
+        </dl>
+    </div>
+</div>

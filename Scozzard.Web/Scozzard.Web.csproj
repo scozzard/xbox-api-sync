@@ -172,6 +172,8 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
+    <Content Include="Scripts\Chart.js" />
+    <Content Include="Scripts\Chart.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -182,6 +184,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Ajax\AjaxActivityController.cs" />
     <Compile Include="Controllers\FeedController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -224,6 +227,7 @@
     <Content Include="packages.config" />
     <Content Include="Views\Shared\_FeedLayout.cshtml" />
     <Content Include="Views\Shared\_UserPartial.cshtml" />
+    <Content Include="Views\Shared\ActivityChart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -234,6 +238,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Activity\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Scozzard.Model\Scozzard.Model.csproj">
