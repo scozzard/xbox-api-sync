@@ -74,8 +74,11 @@
     <Compile Include="Client\RestRequestDetails.cs" />
     <Compile Include="Client\XboxApi.cs" />
     <Compile Include="Client\XboxApiClient.cs" />
-    <Compile Include="Model\Activity.cs" />
-    <Compile Include="Model\Profile.cs" />
+    <Compile Include="Model\game_clip.cs" />
+    <Compile Include="Model\game_clip_thumbnail.cs" />
+    <Compile Include="Model\game_clip_uri.cs" />
+    <Compile Include="Model\recent_activity.cs" />
+    <Compile Include="Model\xbox_user.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

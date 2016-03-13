@@ -6,6 +6,7 @@ using Microsoft.Owin.Security;
 using Scozzard.Model;
 using Scozzard.Web.ViewModels;
 using Scozzard.Service.Interfaces;
+using Scozzard.Service.SyncServices.Interfaces;
 
 namespace Scozzard.Web.Controllers
 {

@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Scozzard.Service;
+﻿using Scozzard.Service;
 using Scozzard.Service.Interfaces;
 using Autofac;
 using Scozzard.XboxApiClient.Client;
 using Scozzard.Respository.Repositories;
 using Scozzard.Respository.Infrastructure;
+using Scozzard.Service.SyncServices;
+using Scozzard.Service.SyncServices.Interfaces;
 
 namespace Scozzard.Task.SyncUser
 {
-   public class Program
+    public class Program
     {
         public static void Main(string[] args)
         {

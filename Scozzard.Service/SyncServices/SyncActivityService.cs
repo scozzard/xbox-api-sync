@@ -1,13 +1,11 @@
 ﻿using Scozzard.Model;
 using Scozzard.Service.Interfaces;
+using Scozzard.Service.SyncServices.Interfaces;
 using Scozzard.XboxApiClient.Client;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Scozzard.Service
+namespace Scozzard.Service.SyncServices
 {
     public class SyncActivityService : ISyncActivityService
     {
@@ -42,9 +40,9 @@ namespace Scozzard.Service
                         SessionDurationInMinutes = activity.sessionDurationInMinutes,
                         Description = activity.description,
                         ImageUrl = activity.itemImage,
-                        XboxUserID = xboxUser.XboxUserID,
                         Platform = activity.platform,
                         ContentType = activity.contentType,
+                        XboxUserID = xboxUser.XboxUserID,
                         XboxUser = xboxUser
                     });
                 }

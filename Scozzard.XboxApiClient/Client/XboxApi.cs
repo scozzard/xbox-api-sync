@@ -35,5 +35,12 @@ namespace Scozzard.XboxApiClient.Client
 
             return GetList<recent_activity>(requestDetails);
         }
+
+        public virtual List<game_clip> GetUserGameClips(long xboxUserId)
+        {
+            var requestDetails = new RestRequestDetails(HttpMethod.Get, apiResourceUrl + xboxUserId + "/game-clips");
+
+            return GetList<game_clip>(requestDetails);
+        }
     }
 }

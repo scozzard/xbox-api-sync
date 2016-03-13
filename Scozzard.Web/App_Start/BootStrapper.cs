@@ -11,6 +11,7 @@ using Scozzard.Respository.Repositories;
 using Scozzard.Service;
 using Scozzard.Web.Mappings;
 using Scozzard.XboxApiClient.Client;
+using Scozzard.Service.SyncServices;
 
 namespace Scozzard.Web.App_Start
 {

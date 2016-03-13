@@ -19,6 +19,7 @@ namespace Scozzard.Model
         public int TenureLevel { get; set; }
         public List<XboxUser> Friends { get; set; }
         public List<Activity> Activities { get; set; }
+        public List<GameClip> GameClips { get; set; }
         public DateTime ProfileLastSyncedAt { get; set; }
         public DateTime ActivitiesLastSyncedAtt { get; set; }
     }

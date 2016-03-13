@@ -107,6 +107,43 @@ namespace Scozzard.Respository
                         TenureLevel = 5,
                         ProfileLastSyncedAt = DateTime.UtcNow.AddDays(-2),
                         ActivitiesLastSyncedAtt = DateTime.UtcNow.AddDays(-2),
+                        GameClips = new List<GameClip>()
+                        {
+                            new GameClip()
+                            {
+                                XblID = "174b7bb5-eaac-4c99-9469-8af1ffa5a7ae",
+                                State = "Published",
+                                DateRecorded = new DateTime(2015, 12, 31, 10, 0, 0),
+                                DatePublished = new DateTime(2015, 12, 31, 10, 1, 20),
+                                ClipUris = new List<GameClipUri>()
+                                {
+                                    new GameClipUri()
+                                    {
+                                        Uri = "http://gameclipscontent-d2016.xboxlive.com/00090000040e4407-174b7bb5-eaac-4c99-9469-8af1ffa5a7ae/GameClip-Original.MP4?sv=2014-02-14&sr=c&sig=R1BeqwlzwB%2FIcNXUX4B%2FuWakfUIwMvNepaSecdVYrdI%3D&st=2016-03-13T18%3A06%3A39Z&se=2016-03-13T19%3A11%3A39Z&sp=r&__gda__=1457896299_edca4c12388343ba809466b469e2e445",
+                                        FileSize = 28553786,
+                                        UriType = "Download",
+                                        Expiration = new DateTime(2016, 3, 13)
+                                    }
+                                },
+                                Thumbnails =new List<GameClipThumbnail>()
+                                {
+                                    new GameClipThumbnail()
+                                    {
+                                        Uri = "http://gameclipscontent-t2016.xboxlive.com/00090000040e4407-174b7bb5-eaac-4c99-9469-8af1ffa5a7ae-public/Thumbnail_Small.PNG",
+                                        FileSize = 117439,
+                                        ThumbnailType = "Small"
+                                    },
+                                    new GameClipThumbnail()
+                                    {
+                                        Uri = "http://gameclipscontent-t2016.xboxlive.com/00090000040e4407-174b7bb5-eaac-4c99-9469-8af1ffa5a7ae-public/Thumbnail_Large.PNG",
+                                        FileSize = 388443,
+                                        ThumbnailType = "Large"
+                                    },
+                                },
+                                TitleName = "FIFA 15",
+                                DeviceType = "XboxOne"
+                            }
+                        },
                         Friends = new List<XboxUser>()
                         {
                             new XboxUser()

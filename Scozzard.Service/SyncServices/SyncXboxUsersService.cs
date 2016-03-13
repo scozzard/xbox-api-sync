@@ -1,15 +1,11 @@
 ﻿using Scozzard.Model;
-using Scozzard.Respository.Repositories;
 using Scozzard.Service.Interfaces;
+using Scozzard.Service.SyncServices.Interfaces;
 using Scozzard.XboxApiClient.Client;
-using Scozzard.XboxApiClient.Model;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Scozzard.Service
+namespace Scozzard.Service.SyncServices
 {
     public class SyncXboxUsersService : ISyncXboxUsersService
     {
