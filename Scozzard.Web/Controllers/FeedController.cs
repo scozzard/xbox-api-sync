@@ -36,7 +36,7 @@ namespace Scozzard.Web.Controllers
             var allActivities =  userActivities.Union(friendsActivities);
 
 
-            activityViewModels = Mapper.Map<IEnumerable<Activity>, IEnumerable<ActivityViewModel>>(allActivities.OrderByDescending(a => a.StartTime));
+            activityViewModels = Mapper.Map<IEnumerable<Activity>, IEnumerable<ActivityViewModel>>(allActivities.OrderByDescending(a => a.Date));
             return View(activityViewModels);
         }
     }

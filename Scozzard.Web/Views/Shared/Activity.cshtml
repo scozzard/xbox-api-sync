@@ -1,18 +1,39 @@
 ﻿
 @model Scozzard.Web.ViewModels.ActivityViewModel
 
-<div class="panel-body">
-    <div class="media">
-        <div class="pull-left" style="vertical-align:central">
-            <img class="media-object pull-left" style="height:64px; width:64px" src="@Model.XboxUser.GameDisplayPicRaw" />
-            <img class="media-object pull-left"  src="images/arrow-right.png" style="height:20px; width:20px; margin-top:20px; margin-left:10px; margin-right:10px" />
-            <img class="media-object pull-left" style="height:64px; width:64px" src="@Model.ImageUrl" />
-        </div>
-        <div class="media-body">
-            <small class="small"><strong>@Model.StartTime.ToShortDateString()</strong> - @Model.StartTime.ToString("hh:mm tt") @(Model.EndTime.HasValue ? Html.Raw("to " + @Model.EndTime.Value.ToString("hh:mm tt")) : Html.Raw("")) (@Model.SessionDurationInMinutes minutes)</small>
-            <p>
-                @Model.XboxUser.GameDisplayName @Model.Description
-            </p>
+@if (Model.ActivityItemType == "Played")
+{
+    <div class="panel-body">
+        <div class="media">
+            <div class="pull-left" style="vertical-align:central">
+                <img class="media-object pull-left" style="height:64px; width:64px" src="@Model.XboxUser.GameDisplayPicRaw" />
+                <img class="media-object pull-left"  src="images/arrow-right.png" style="height:20px; width:20px; margin-top:20px; margin-left:10px; margin-right:10px" />
+                <img class="media-object pull-left" style="height:64px; width:64px" src="@Model.ImageUrl" />
+            </div>
+            <div class="media-body">
+                <small class="small"><strong>@Model.StartTime.Value.ToShortDateString()</strong> - @Model.StartTime.Value.ToString("hh:mm tt") @(Model.EndTime.HasValue ? Html.Raw("to " + @Model.EndTime.Value.ToString("hh:mm tt")) : Html.Raw("")) (@Model.SessionDurationInMinutes minutes)</small>
+                <p>
+                    @Model.XboxUser.GameDisplayName @Model.Description
+                </p>
+            </div>
         </div>
     </div>
-</div>
+}
+else
+{
+    <div class="panel-body">
+        <div class="media">
+            <div class="pull-left" style="vertical-align:central">
+                <img class="media-object pull-left" style="height:64px; width:64px" src="@Model.XboxUser.GameDisplayPicRaw" />
+                <img class="media-object pull-left" src="images/arrow-right.png" style="height:20px; width:20px; margin-top:20px; margin-left:10px; margin-right:10px" />
+                <img class="media-object pull-left" style="height:64px; width:64px" src="@Model.ImageUrl" />
+            </div>
+            <div class="media-body">
+                <small class="small"><strong>@Model.Date.Value.ToShortDateString()</strong> - @Model.Date.Value.ToString("hh:mm tt")</small>
+                <p>
+                    @Model.XboxUser.GameDisplayName @Model.Description
+                </p>
+            </div>
+        </div>
+    </div>
+}

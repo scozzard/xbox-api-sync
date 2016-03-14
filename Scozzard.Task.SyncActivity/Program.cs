@@ -38,8 +38,8 @@ namespace Scozzard.Task.SyncActivity
             using (var container = builder.Build())
             {
                 container.Resolve<SyncActivityService>().SyncActivity();
-                container.Resolve<SyncGameClipsService>().SyncGameClips();
-                container.Resolve<SyncScreenshotsService>().SyncScreenshots();
+                //container.Resolve<SyncGameClipsService>().SyncGameClips();
+                //container.Resolve<SyncScreenshotsService>().SyncScreenshots();
             }
         }
     }

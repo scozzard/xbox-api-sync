@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Scozzard.XboxApiClient.Model
 {
-    public class recent_activity
+    public class activity_item
     {
-        public DateTime startTime { get; set; }
+        public DateTime? startTime { get; set; }
 	    public DateTime? endTime { get; set; }
 	    public int sessionDurationInMinutes { get; set; }
 	    public string contentImageUri { get; set; }

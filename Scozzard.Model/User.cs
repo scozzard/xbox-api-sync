@@ -13,6 +13,7 @@ namespace Scozzard.Model
         public string Email { get; set; }
         public string Password { get; set; }
         public long XboxUserID { get; set; }
+        public string Test { get; set; }
         public XboxUser XboxUser { get; set; }
     }
 }

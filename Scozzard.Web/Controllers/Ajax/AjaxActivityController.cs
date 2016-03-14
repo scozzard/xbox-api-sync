@@ -32,7 +32,7 @@ namespace Scozzard.Web.Controllers.Ajax
 
             var usersActivities = userActivities
                 .Where(x => x.StartTime >= DateTime.UtcNow.AddDays(-6))
-                .GroupBy(x => x.StartTime.Date)
+                .GroupBy(x => x.StartTime.Value.Date)
                 .ToDictionary(grp => grp.Key, grp => grp.Sum(x => x.SessionDurationInMinutes));
 
             PopulateEmptyDays(usersActivities);
@@ -43,7 +43,7 @@ namespace Scozzard.Web.Controllers.Ajax
 
             var allFriendsActivities = allActivities
                .Where(x => x.StartTime >= DateTime.UtcNow.AddDays(-6))
-               .GroupBy(x => x.StartTime.Date)
+               .GroupBy(x => x.StartTime.Value.Date)
                .ToDictionary(grp => grp.Key, grp => (int)grp.Average(x => x.SessionDurationInMinutes));
 
             PopulateEmptyDays(allFriendsActivities);

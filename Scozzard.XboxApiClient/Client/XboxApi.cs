@@ -29,11 +29,11 @@ namespace Scozzard.XboxApiClient.Client
             return GetList<xbox_user>(requestDetails);
         }
 
-        public virtual List<recent_activity> GetUserActivities(long xboxUserId)
+        public virtual List<activity_item> GetUserActivities(long xboxUserId)
         {
-            var requestDetails = new RestRequestDetails(HttpMethod.Get, apiResourceUrl + xboxUserId + "/activity/recent");
+            var requestDetails = new RestRequestDetails(HttpMethod.Get, apiResourceUrl + xboxUserId + "/activity");
 
-            return GetList<recent_activity>(requestDetails);
+            return GetSingle<activity>(requestDetails).activityItems;
         }
 
         public virtual List<game_clip> GetUserGameClips(long xboxUserId)
