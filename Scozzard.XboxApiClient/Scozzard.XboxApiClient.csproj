@@ -74,6 +74,9 @@
     <Compile Include="Client\RestRequestDetails.cs" />
     <Compile Include="Client\XboxApi.cs" />
     <Compile Include="Client\XboxApiClient.cs" />
+    <Compile Include="Model\screenshot_uri.cs" />
+    <Compile Include="Model\screenshot_thumbnail.cs" />
+    <Compile Include="Model\screenshot.cs" />
     <Compile Include="Model\game_clip.cs" />
     <Compile Include="Model\game_clip_thumbnail.cs" />
     <Compile Include="Model\game_clip_uri.cs" />

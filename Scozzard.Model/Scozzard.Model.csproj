@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Screenshot.cs" />
     <Compile Include="GameClip.cs" />
     <Compile Include="Activity.cs" />
     <Compile Include="Category.cs" />

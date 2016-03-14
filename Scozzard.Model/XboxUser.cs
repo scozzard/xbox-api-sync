@@ -20,6 +20,7 @@ namespace Scozzard.Model
         public List<XboxUser> Friends { get; set; }
         public List<Activity> Activities { get; set; }
         public List<GameClip> GameClips { get; set; }
+        public List<Screenshot> Screenshots { get; set; }
         public DateTime ProfileLastSyncedAt { get; set; }
         public DateTime ActivitiesLastSyncedAtt { get; set; }
     }

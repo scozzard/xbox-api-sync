@@ -144,6 +144,43 @@ namespace Scozzard.Respository
                                 DeviceType = "XboxOne"
                             }
                         },
+                        Screenshots = new List<Screenshot>()
+                        {
+                            new Screenshot()
+                            {
+                                XblID = "4229575f-157c-46f4-b3bf-6fd3016fe5c4",
+                                State = "Published",
+                                DateTaken = new DateTime(2016, 3, 13, 10, 0, 0),
+                                DatePublished = new DateTime(2016, 3, 13, 11, 1, 20),
+                                ScreenshotUris = new List<ScreenshotUri>()
+                                {
+                                    new ScreenshotUri()
+                                    {
+                                        Uri = "http://screenshotscontent-t5002.xboxlive.com/00090000040e4407-4229575f-157c-46f4-b3bf-6fd3016fe5c3/Screenshot-Original.png?sv=2014-02-14&sr=c&sig=ns5imB8HmjJ5UwhNwXL%2FSUxy%2BORPDDbCTFk%2BakaKANM%3D&st=2016-03-14T10%3A22%3A28Z&se=2016-03-14T11%3A27%3A28Z&sp=r&__gda__=1457954848_d5bc47b95ca2c48eec757f55918016e6",
+                                        FileSize = 2316697,
+                                        UriType = "Download",
+                                        Expiration = new DateTime(2016, 3, 14, 11, 30, 0)
+                                    }
+                                },
+                                Thumbnails =new List<ScreenshotThumbnail>()
+                                {
+                                    new ScreenshotThumbnail()
+                                    {
+                                        Uri = "http://screenshotscontent-t5002.xboxlive.com/00090000040e4407-4229575f-157c-46f4-b3bf-6fd3016fe5c3/Thumbnail_Small.PNG",
+                                        FileSize = 104995,
+                                        ThumbnailType = "Small"
+                                    },
+                                    new ScreenshotThumbnail()
+                                    {
+                                        Uri = "http://screenshotscontent-t5002.xboxlive.com/00090000040e4407-4229575f-157c-46f4-b3bf-6fd3016fe5c3/Thumbnail_Large.PNG",
+                                        FileSize = 381121,
+                                        ThumbnailType = "Large"
+                                    },
+                                },
+                                TitleName = "Call of Duty: Black Ops III",
+                                DeviceType = "XboxOne"
+                            }
+                        },
                         Friends = new List<XboxUser>()
                         {
                             new XboxUser()

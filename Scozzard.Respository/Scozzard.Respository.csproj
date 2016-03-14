@@ -62,6 +62,8 @@
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IScreenshotRepository.cs" />
+    <Compile Include="Repositories\ScreenshotRepository.cs" />
     <Compile Include="Repositories\GameClipRepository.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
     <Compile Include="Repositories\IGameClipRepository.cs" />

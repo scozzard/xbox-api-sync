@@ -42,5 +42,12 @@ namespace Scozzard.XboxApiClient.Client
 
             return GetList<game_clip>(requestDetails);
         }
+
+        public virtual List<screenshot> GetUserScreenshots(long xboxUserId)
+        {
+            var requestDetails = new RestRequestDetails(HttpMethod.Get, apiResourceUrl + xboxUserId + "/screenshots");
+
+            return GetList<screenshot>(requestDetails);
+        }
     }
 }

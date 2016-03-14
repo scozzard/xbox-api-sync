@@ -44,11 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IScreenshotService.cs" />
+    <Compile Include="ScreenshotService.cs" />
     <Compile Include="GameClipService.cs" />
     <Compile Include="CategoryService.cs" />
     <Compile Include="Interfaces\IGameClipService.cs" />
     <Compile Include="Interfaces\ICategoryService.cs" />
     <Compile Include="Interfaces\IGadgetService.cs" />
+    <Compile Include="SyncServices\Interfaces\ISyncScreenshotsService.cs" />
     <Compile Include="SyncServices\Interfaces\ISyncGameClipsService.cs" />
     <Compile Include="SyncServices\Interfaces\ISyncActivityService.cs" />
     <Compile Include="SyncServices\Interfaces\ISyncXboxUsersService.cs" />
@@ -56,6 +59,7 @@
     <Compile Include="Interfaces\IActivityService.cs" />
     <Compile Include="Interfaces\IXboxUserService.cs" />
     <Compile Include="MappingProfiles\XboxUserMapperProfile.cs" />
+    <Compile Include="SyncServices\SyncScreenshotsService.cs" />
     <Compile Include="SyncServices\SyncGameClipsService.cs" />
     <Compile Include="SyncServices\SyncActivityService.cs" />
     <Compile Include="SyncServices\SyncXboxUsersService.cs" />
